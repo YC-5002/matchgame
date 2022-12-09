@@ -1,0 +1,122 @@
+body {
+  height: 100vh;
+  color: #553b18;
+  background-color: #fefaf5;
+  text-align: center;
+  font-family: 'Mansalva', cursive;
+}
+
+button{
+  background-color: #fefaf5;
+  border: 1px solid #553b18;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  color: #553b18;
+  padding: 1vh 2vh;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vh;
+  font-family: 'Mansalva', cursive;
+}
+button:hover{
+  background-color: #66462a;
+  color: white; 
+}
+
+.game {
+  width: 90vh;
+  height: 90vh;
+  margin-right:36vh;
+  margin-left:36vh;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 20vh;
+  height: 20vh;
+  margin: .75vh;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .3s;
+}
+
+.card:active {
+  transform: scale(0.97);
+  transition: transform .1s;
+}
+
+.card.flip {
+  transform: rotateX(180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 2vh;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateX(180deg);
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .text {
+  visibility: hidden;
+  width: 60vh;
+  background-color: #553b18;
+  color: white;
+  text-align: left;
+  border-radius: 6px;
+  padding: 3vh;
+  position: absolute;
+  z-index: 1;
+  bottom: 70%;
+  left: 20%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

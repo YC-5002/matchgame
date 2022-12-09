@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+  <title>Match Game</title>
+</head>
+<body>
+  <h1>Let's play a match game!</h1>
+  <div class="game">
+    <div class="card" data-pair="one">
+      <img class="front" src="images/pair1.jpeg" alt="one" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+    <div class="card" data-pair="one">
+      <img class="front" src="images/pair1.jpeg" alt="one" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+
+    <div class="card" data-pair="two">
+      <img class="front" src="images/pair2.jpeg" alt="two" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+    <div class="card" data-pair="two">
+      <img class="front" src="images/pair2.jpeg" alt="two" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+
+    <div class="card" data-pair="three">
+      <img class="front" src="images/pair3.jpeg" alt="three" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+    <div class="card" data-pair="three">
+      <img class="front" src="images/pair3.jpeg" alt="three" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+
+    <div class="card" data-pair="four">
+      <img class="front" src="images/pair4.jpeg" alt="four" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+    <div class="card" data-pair="four">
+      <img class="front" src="images/pair4.jpeg" alt="four" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+
+    <div class="card" data-pair="five">
+      <img class="front" src="images/pair5.jpeg" alt="five" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+    <div class="card" data-pair="five">
+      <img class="front" src="images/pair5.jpeg" alt="five" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+
+    <div class="card" data-pair="six">
+      <img class="front" src="images/pair6.jpeg" alt="six" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+    <div class="card" data-pair="six">
+      <img class="front" src="images/pair6.jpeg" alt="six" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+    <div class="card" data-pair="seven">
+      <img class="front" src="images/pair7.jpeg" alt="seven" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+    <div class="card" data-pair="seven">
+      <img class="front" src="images/pair7.jpeg" alt="seven" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+    <div class="card" data-pair="eight">
+      <img class="front" src="images/pair8.jpeg" alt="eight" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+    <div class="card" data-pair="eight">
+      <img class="front" src="images/pair8.jpeg" alt="eight" />
+      <img class="back" src="images/back.jpeg" alt="background" />
+    </div>
+  </div>
+  <div class="popup" onclick="textPop();">
+    <h2>How to Play</h2>
+    <span class="text" id="pop">
+      Click on an image to reveal it. It will stay revealed until you click on a second image. If both images match, they will stay revealed. If they are not matching, they will be flipped back. Once all of the images have been revealed the game ends.<br><br>
+      The score is determined by the number of clicks. Each time you click on one of the
+      images, the score increases by 1. Thus, the lowest possible score is 16.<br><br>
+      When reset is clicked, the page will reload and all images will be scrambled. The score will be set to 0.
+    </span>
+  </div>
+  <footer>
+    <h2>
+        Score: <br><span id="score">0</span>
+    </h2>
+  </footer>
+<button onclick="reset();">Reset</button>
+  <script src="script.js"></script>
+</body>
+</html>
