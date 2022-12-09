@@ -28,8 +28,8 @@ button:hover{
 .game {
   width: 90vh;
   height: 90vh;
-  margin-right:39vh;
-  margin-left:39vh;
+  margin-right:43vh;
+  margin-left:43vh;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
